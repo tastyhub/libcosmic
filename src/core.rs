@@ -244,8 +244,8 @@ impl Core {
     #[allow(clippy::cast_precision_loss)]
     /// Call this whenever the scaling factor or window width has changed.
     fn is_condensed_update(&mut self) {
-        // Nav bar (200px) + padding (8px) + content (360px)
-        let mut breakpoint = 200.0 + 8.0 + 360.0;
+        // Nav bar (170px) + padding (8px) + content (360px)
+        let mut breakpoint = 170.0 + 8.0 + 360.0;
         //TODO: the app may return None from the context_drawer function even if show_context is true
         if self.window.show_context && !self.window.context_is_overlay {
             // Context drawer min width (344px) + padding (8px)
@@ -271,8 +271,8 @@ impl Core {
         // Content width (360px) + padding (8px)
         let mut reserved_width = 360.0 + 8.0;
         if has_nav {
-            // Navbar width (200px) + padding (8px)
-            reserved_width += 200.0 + 8.0;
+            // Navbar width (170px) + padding (8px)
+            reserved_width += 170.0 + 8.0;
         }
 
         #[allow(clippy::manual_clamp)]

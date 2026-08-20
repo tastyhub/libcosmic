@@ -402,7 +402,7 @@ where
             .height(iced::Length::Fill);
 
         if !self.core().is_condensed() {
-            nav = nav.max_width(200);
+            nav = nav.max_width(170);
         }
 
         Some(Element::from(nav))
